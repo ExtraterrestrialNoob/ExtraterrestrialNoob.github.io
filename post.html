@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"> </script>
+</head>
+<body>
+    <div id="postContainer">
+        
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="application/javascript">
+    const queryString = window.location.search;
+    //https://www.sitepoint.com/get-url-parameters-with-javascript/
+    const urlParams = new URLSearchParams(queryString);
+    const post = urlParams.get('post');
+    console.log(post);
+    //console.log(queryString);
+
+    var converter = new showdown.Converter(),
+        text = '# hello, markdown!',
+        html = converter.makeHtml(text);
+    document.getElementById("postContainer").innerHTML = html;
+
+    $.ajax({
+            type: 'GET',
+            url:"/_posts/"+ post,
+            success:function(data){
+            console.log(data);
+            }
+        });
+</script>
+
+
+</html>

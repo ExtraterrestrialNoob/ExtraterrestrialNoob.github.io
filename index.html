@@ -1,29 +1,50 @@
 <!DOCTYPE html>
-<head>
-  <title>ExtraterrestrialNoob's Blog</title>
 
-  <!-- CSS only -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-    crossorigin="anonymous"
-  />
+<head>
+    <title>ExtraterrestrialNoob's Blog</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"> </script>
+
+    <style type="text/css">
+        body {
+            background: rgba(32, 19, 32, 0.952) !important;
+        }
+    </style>
+
+
+    <script type="application/javascript">
+        var converter = new showdown.Converter(),
+            text = '# hello, markdown!',
+            html = converter.makeHtml(text);
+        console.log(html);
+    </script>
+
 </head>
 
 <html>
-  <body>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="https://avatars.githubusercontent.com/u/109482271?s=40&v=4" alt="Logo" width="" height=""
+                    class="rounded-circle">
+                ExtraterrestrialNoob
+            </a>
+        </div>
+    </nav>
     <div class="container">
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                  <img src="https://avatars.githubusercontent.com/u/109482271?s=40&v=4" alt="Logo" width="30" height="24" class="rounded">
-                  ExtraterrestrialNoob
-                </a>
-              </div>
-        </nav>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
+        <h4 class="text-white">Posts</h1>
+            <div>
+                <ul>
+                    <a href="/post.html?post=Corch-Crackme.md&read" class="text-white text-decoration-none ">2022-10-17 | Corch
+                        Crackme</a>
+                </ul>
+            </div>
     </div>
-  </body>
+</body>
+
 </html>
