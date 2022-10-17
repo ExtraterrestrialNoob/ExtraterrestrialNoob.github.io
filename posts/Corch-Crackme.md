@@ -7,9 +7,9 @@ in crackmess one description author state that we can patch it or find password.
 
 first we can check it with pe scanning tool to get a idea , i'm using Detect It Easy 
 
-![Screenshot 2022-10-14 121116.png](attachment:51cf5557-88fa-406f-8e03-25dda53f8d0f.png)
+![Screenshot2022-10-14121116.png](posts/img/Corch-Crackme/Screenshot2022-10-14121116.png)
 
-![Screenshot 2022-10-14 121345.png](attachment:1304cc0c-e6e6-46bf-a500-b1f0883ff891.png)
+![Screenshot2022-10-14121345.png](posts/img/Corch-Crackme/Screenshot2022-10-14121345.png)
 
 Looks like it is not packed. 
 
@@ -23,11 +23,11 @@ without any anti-anti-debug plugins enabled , it show a message in console "You 
     - IsDebuggerPresent
     - FindWindowA
     
-![isdebuggerpresent1.png](attachment:61b2045e-3a88-4db7-904f-667205de4e94.png)
-![findwindowa.png](attachment:0de2a956-f88c-4725-970c-06fbd2b187c4.png)
+![isdebuggerpresent1.png](posts/img/Corch-Crackme/isdebuggerpresent1.png)
+![findwindowa.png](posts/img/Corch-Crackme/findwindowa.png)
 
 we can simply use ScyllaHide pluging to bypass these anti-debug tricks. 
 
-![scyllahideoptions.png](attachment:434fa850-21cc-4be2-9082-bc0d8373620d.png)
+![scyllahideoptions.png](posts/img/Corch-Crackme/scyllahideoptions.png)
 
 
