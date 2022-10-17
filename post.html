@@ -2,10 +2,29 @@
 
 <head>
     <title></title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"> </script>
+    <style type="text/css">
+        body {
+            background: rgba(32, 19, 32, 0.952) !important;
+        }
+    </style>
+
 </head>
 <body>
-    <div id="postContainer">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="https://avatars.githubusercontent.com/u/109482271?s=40&v=4" alt="Logo" width="" height=""
+                    class="rounded-circle">
+                ExtraterrestrialNoob
+            </a>
+        </div>
+    </nav>
+
+    <div id="postContainer" class="text-white">
         
     </div>
 </body>
@@ -18,19 +37,15 @@
     console.log(post);
     //console.log(queryString);
 
-    var converter = new showdown.Converter(),
-        text = '# hello, markdown!',
-        html = converter.makeHtml(text);
-    document.getElementById("postContainer").innerHTML = html;
-
     $.ajax({
             type: 'GET',
             url:"/posts/"+ post,
             success:function(data){
-            console.log(data);
+                var converter = new showdown.Converter(),
+                html = converter.makeHtml(data);
+                document.getElementById("postContainer").innerHTML = html;
             }
         });
 </script>
-
 
 </html>
