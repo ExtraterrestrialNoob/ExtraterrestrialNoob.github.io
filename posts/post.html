@@ -64,6 +64,7 @@
                 var converter = new showdown.Converter(),
                 html = converter.makeHtml(data);
                 document.getElementById("postContainer").innerHTML = html;
+                document.title = post ;
             }
         });
 </script>
